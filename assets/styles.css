@@ -1,22 +1,29 @@
 /* Astrick wildcard selector to override browser default settings*/
 
-* { 
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-/*Header*/
-header {
+/* General styles */
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    /* Generaic styles */
+    color: #3a3a3a;
 }
+
+
+/*Header*/
+header {}
 
 /*Main Content*/
 main {
-
+    flex: 1 0 auto;
 }
 
 /*Footer*/
-footer {
-    
-}
+footer {}
