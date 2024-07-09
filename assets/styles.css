@@ -25,6 +25,10 @@ body {
 /*Header*/
 header {}
 
+h1 {
+    font-family: 'Marcellus', sans-serif;
+}
+
 /*Main Content*/
 main {
     flex: 1 0 auto;
