@@ -1,10 +1,9 @@
-/*Google Fonts*/
+/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
-
 
 /* Astrick wildcard selector to override browser default settings*/
 
-* {
+* { 
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -21,8 +20,21 @@ body {
     font-family: 'Marcellus', sans-serif;
 }
 
+h1 {
+    font-family: 'Marcellus', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #252525;
 
-/*Header*/
+}
+
+h2 {
+    font-family: 'Marcellus', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #ffffff;
+}
+
 header {
     background-color: #ffffff;
     padding: 0 1rem;
@@ -38,14 +50,6 @@ header {
 header a {
     text-decoration: none;
     color: inherit;
-}
-
-h1 {
-    font-family: 'Marcellus', sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: #252525;
-
 }
 
 #menu {
@@ -97,7 +101,7 @@ main {
 #encouraging-quote {
     height: 60px;
     width: 100%;
-    background: url("../assets/images/pexels-eberhardgross-844297\ \(2\).jpg") no-repeat center center/cover;
+    background: url("../images/pexels-eberhardgross-844297\ \(2\).jpg") no-repeat center center/cover;
     position: relative;
     display: flex;
     justify-content: center;
@@ -155,7 +159,13 @@ button:hover {
     background-color: #e65b59;
 }
 
-/*Log page styles*/
+/* Main content */
+main {
+    flex: 1 0 auto;
+    margin-top: 70px;
+}
+
+/* Sections */
 
 #log-page {
     width: 90%;
@@ -189,7 +199,7 @@ button:hover {
     border-radius: 8px;
 }
 
-#todo-section {
+#todo-list {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
     display: flex;
@@ -200,81 +210,38 @@ button:hover {
     border-radius: 8px;
 }
 
-.todo-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+#todo-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-#todo-row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #ffffff;
-    border-radius: 30px;
-    padding-left: 20px;
-    margin-bottom: 25px;
-}
-
-#input-box {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
+#todo-list li {
+    background-color: #fff;
     padding: 10px;
-    font-size: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
 }
 
-#todo-button {
-    border: none;
-    outline: none;
-    padding: 16px 50px;
-    background: #ff5945;
-    color: #ffffff;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 40px;
+#log-page h2 {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 100%;
+    color: #3a3a3a;
 }
 
-#list-container {
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
+#gratitude-log textarea,
+#food-log input,
+#movement-log input,
+#todo-list input {
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: none;
 }
-
-#list-container li {
-    list-style: none;
-    font-size: 17px;
-    padding: 12px 8px 12px 50px;
-    user-select: none;
-    cursor: pointer;
-    position: relative;
-}
-
-#list-container li::before{
-    content: '';
-    position: absolute;
-    height: 28px;
-    width: 28px;
-    border-radius: 50%;
-    background-image: url(images/unchecked.png);
-    background-size: cover;
-    background-position: center;
-    top: 12px;
-    left: 8px;
-}
-
-#list-container li.checked {
-    color: #555;
-    text-decoration: line-through;
-}
-
-#list-container li.checked::before{
-    background-image: url(images/checked.png);
-}
-
 
 #food-log {
     grid-column: 2 / 3;
@@ -313,41 +280,8 @@ button:hover {
     text-align: center;
 }
 
-#todo-list ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#todo-list li {
-    background-color: #fff;
-    padding: 10px;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
-}
-
-#log-page h2 {
-    margin-bottom: 20px;
-    text-align: left;
-    font-size: 100%;
-    color: #3a3a3a;
-}
-
-#gratitude-log textarea,
-#food-log input,
-#movement-log input,
-#todo-list input {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: none;
-}
 
 
-/*Footer*/
 footer {
     #social-networks {
         text-align: center;
@@ -361,6 +295,19 @@ footer {
         font-size: 160%;
         padding: 5%;
         color: #3a3a3a;
+    }
+}
+
+/* Media query for mobile and small screens */
+@media (max-width: 767px) {
+    #log-page {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #log-page > section {
+        width: 100%;
     }
 }
 
@@ -398,11 +345,46 @@ footer {
         /* pust main content down to accommodate larger header*/
         margin-top: 79px;
     }
+
+    #progress-overview {
+        width: 70%;
+    }
+
+    button {
+        width: 150px;
+    }
+    
+    #log-page {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 20px;
+    }
 }
+
 
 /* Larger devices (laptops and desktops, 992px and up)*/
 @media screen and (min-width:992px) {
     #menu a:hover{
         border-bottom: 1px solid #3a3a3a;
+    }
+
+    #progress-overview {
+        width: 60%;
+    }
+
+    #log-page {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    #log-page section {
+        flex: 1 1 30%;
+    }
+
+    #log-page #affirmation-generator {
+        flex: 1 1 100%;
+        order: 3;
     }
 }

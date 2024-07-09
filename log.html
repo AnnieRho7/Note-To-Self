@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--Title-->
-<title>Note To Self</title>
-<!--Favicon-->
-<link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
-<!--Stylesheet-->
-<link rel="stylesheet" href="assets/styles.css" />
-</head>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Title-->
+        <title>Note To Self</title>
+        <!--Favicon-->
+        <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+        <!--Stylesheet-->
+        <link rel="stylesheet" href="assets/styles.css" />
+    </head>
 
 <body>
 
@@ -58,22 +58,17 @@
                     <button type="button" onclick="saveGratitude()">Save Gratitude</button>
                 </form>
             </section>
-            <section id="todo-section">
-                <div class="todo-list">
-                    <h2>To-Do List</h2>
-                <div id="todo-row">
-                    <label for="todo">To-Do:</label>
-                    <input type="text" id="input-box" placeholder="Add your text...">
-                    <button id="todo-button" type="button" onclick="addToDo()">Add</button>
+            <section id="todo-list">
+                <div id="myDIV" class="to-do-section">
+                  <h2>My To Do List</h2>
+                  <input type="text" id="toDoItems" placeholder="Add To-Do items here...">
+                  <button onclick="newElement()" class="addBtn">Add</button>
                 </div>
-                <ul id="list-container">
-                    <!-- To-do items will be added here
-                     <li class="checked">Task 1</li>
-                     <li>Task 2</li>
-                     <li>Task 3</li> -->
+              
+                <ul id="myUL">
+                  <!-- To-do items will be added here -->
                 </ul>
-            </div>
-            </section>
+              </section>
             <section id="food-log">
                 <h2>Food Log</h2>
                 <form id="food-form">
