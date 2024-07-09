@@ -87,11 +87,72 @@ nav {
     font-size: 2rem;
 }
 
-/*Main Content*/
 main {
     /* Make main element take up any surplus space to push footer down to th ebottom */
     flex: 1 0 auto;
     margin-top: 47px;
+}
+
+/*encouraging-quote*/
+#encouraging-quote {
+    height: 60px;
+    width: 100%;
+    background: url("../images/pexels-eberhardgross-844297\ \(2\).jpg") no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#cover-text {
+    background-color: rgba(241, 109, 107, .7);
+    font-size: 100%;
+    color: #ffffff;
+    position: absolute;
+    padding: 2px; /* Optional: Add some padding for better appearance */
+    border-radius: 5px 5px 5px 5px;
+}
+
+/* Progress Overview Section */
+#progress-overview {
+    width: 90%;
+    margin: 20px auto;
+}
+
+#progress-overview h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+#progress-overview div {
+    line-height: 1.5;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #3a3a3a;
+    border-radius: 5px;
+}
+
+#progress-overview div h3 {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+button {
+    display: block;
+    width: 150px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f16d6b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e65b59;
 }
 
 /*Footer*/
