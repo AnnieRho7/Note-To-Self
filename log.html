@@ -34,7 +34,63 @@
     </header>
 
     <main>
-        Main Content
+        <section id="log-page">
+            <section id="mood-log">
+                <h2>Log Mood</h2>
+                <form id="mood-form">
+                    <label for="mood">How are you feeling today?</label>
+                    <select id="mood" name="mood">
+                        <option value="happy">Happy</option>
+                        <option value="sad">Sad</option>
+                        <option value="angry">Angry</option>
+                        <option value="anxious">Anxious</option>
+                        <option value="excited">Excited</option>
+                        <!-- Add more mood options as needed -->
+                    </select>
+                    <button type="button" onclick="saveMood()">Save Mood</button>
+                </form>
+            </section>
+            <section id="gratitude-log">
+                <h2>Gratitude Log</h2>
+                <form id="gratitude-form">
+                    <textarea id="gratitude" name="gratitude"
+                        placeholder="3 things I am grateful for today are...."></textarea>
+                    <button type="button" onclick="saveGratitude()">Save Gratitude</button>
+                </form>
+            </section>
+            <section id="todo-list">
+                <h2>To-Do List</h2>
+                <form id="todo-form">
+                    <label for="todo">To-Do:</label>
+                    <input type="text" id="todo" name="todo">
+                    <button type="button" onclick="addToDo()">Add</button>
+                    <ul id="todo-list">
+                        <!-- To-do items will be added here -->
+                    </ul>
+                </form>
+            </section>
+            <section id="food-log">
+                <h2>Food Log</h2>
+                <form id="food-form">
+                    <label for="food">What did you eat today?</label>
+                    <input type="text" id="food" name="food">
+                    <button type="button" onclick="saveFood()">Save Food</button>
+                </form>
+            </section>
+            <section id="movement-log">
+                <h2>Movement Log</h2>
+                <form id="movement-form">
+                    <label for="movement">What exercise did you do today?</label>
+                    <input type="text" id="movement" name="movement">
+                    <button type="button" onclick="saveMovement()">Save Movement</button>
+                </form>
+            </section>
+            <section id="affirmation-generator">
+                <h2>Affirmation Generator</h2>
+                <p id="quote"></p>
+                <button onclick="generateQuote()">Generate Quote</button>
+            </section>
+        </section>
     </main>
 
     <footer>
